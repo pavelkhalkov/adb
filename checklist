@@ -1,0 +1,25 @@
+Android Debug Bridge (ADB)		
+
+1	Список устройств - adb devices
+2	Состояние устройства - adb get-state
+3	Установка приложений - adb install d:/downloads/имя_файла.apk
+4	Удаление приложений - adb -s emulator-5554 uninstall имя_файла
+5	Создание скришота	- adb shell screencap /sdcard/screen.png
+6	Передача скриншотов на устройство -	adb adb pull /sdcard/screen.png
+7	Запись видео	- adb shell screenrecord /sdcard/Download/demo.mp4
+8	Передача видеофайлов на устройство -	adb pull /sdcard/Download/имя файла.mp4 D:\downloads\
+9	Проверка существующих пакетов приложения - adb shell pm list package
+10	Загрузка файлов на девайс	- adb push шаблон.doc /sdcard/Download
+11	Снятие логов - adb logcat
+12	Обновление логов прямо в файл	- adb logcat >> D:\log.txt
+13	Взятие всех логов (не дописывая)	- adb logcat -d
+14	Очищение буфера на устройстве - adb logсat -с
+15	Вывод логов последовательно по времени записи	- adb logсat -v time
+16	Взятие логов нужного приложения	- adb logсat имя_файла
+17	"Взятие логов нужного приложения с детальным уровнем сообщения"	- adb logcat имя_файла *:E
+18	Снятие всех логов с с детальным уровнем сообщения	- adb logcat *:E
+19	Работа с параметрами девайса - adb shell getprop / adb shell getprop ro.product.first_api_level
+21	Выдача информации о девайсе	- adb shell dumpsys
+22	Состояние батареи - adb shell dumpsys battery
+23	Заряд батареи	- adb shell dumpsys battery set level 5
+24	Откат настроек 	- adb shell dumpsys battery reset 
